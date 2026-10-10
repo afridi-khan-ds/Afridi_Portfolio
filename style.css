@@ -84,21 +84,74 @@ section{
     width: 100%;
     position: relative;
 }
-.about{
+.section-title{
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+.home{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.about .about-container{
+.home .home-container{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10rem;
 }
-.about img{
+.home img{
     width: 30vw;
     border-radius: 50%;
 }
+
+/* about */
+.about-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.about img {
+    width: 24vw;
+    border-radius: 3rem;
+    order: 1;
+}
+.about-cards {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.about-card {
+    padding: 1.2rem 2rem;
+    border: 1px solid var(--main-color);
+    border-radius: 1.5rem;
+    text-align: left;
+    min-width: 160px;
+}
+.about-card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s ease;
+}
+.about-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.about-card p {
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.about-info .grid {
+    order: 2;
+    flex: 1;
+}
+/* ends here */
+
 .info-box{
     display: flex;
     flex-direction: column;
@@ -152,12 +205,7 @@ section{
     transform: scale(1.1);
 }
 
-.section-title{
-    text-align: center;
-    font-size: 4rem;
-    font-weight: 600;
-    margin-bottom: 3rem;
-}
+/*Experience starts from here*/
 .experience-info{
     display: flex;
     align-items: center;
@@ -170,8 +218,8 @@ section{
 }
 .grid{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 2rem;
+  /*grid-template-columns: repeat(2,1fr);
+    gap: 2rem;   Change this when having more than 1 experience     */
 }
 .grid-card{
     border: 2px solid black;
@@ -371,6 +419,9 @@ footer ul li a{
         padding: 1rem 2rem;
         gap: 2rem;
     }
+    .home .home-container{
+        gap: 3rem;
+    }
     .about .about-container{
         gap: 3rem;
     }
@@ -390,7 +441,21 @@ footer ul li a{
 }
 
 @media(max-width:768px){
-    header{
+    .about-info {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .about-info img {
+        width: 60vw;
+    }
+    .about-cards {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .about-info .grid {
+        width: 100%;
+    }header{
         gap: 1rem;
         padding: 1rem 1rem;
     }
@@ -400,7 +465,7 @@ footer ul li a{
     header .visit-btn{
         display: none;
     }
-    .about-container{
+    .home-container{
         flex-direction: column;
     }
     .input-box .input{
@@ -457,8 +522,12 @@ footer ul li a{
     header .logo{
         font-size: 1.5rem;
     }
+    
+    .home-container img{
+        width: 80vw;
+    }
 
-    .about-container img{
+    .about-info img{
         width: 80vw;
     }
     .input-box .input{
