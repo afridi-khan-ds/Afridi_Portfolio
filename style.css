@@ -556,3 +556,55 @@ a.btn {
 a.btn:hover {
     color: white;
 }
+
+
+/* Project technology badges */
+.project-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0 18px;
+}
+
+.tool-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.tool-python {
+    background: #E8F2FF;
+    color: #2457A6;
+}
+
+.tool-sql {
+    background: #E3F6ED;
+    color: #176B48;
+}
+
+.tool-powerbi {
+    background: #FFF0E1;
+    color: #99500C;
+}
+
+.tool-excel {
+    background: #E7F5E8;
+    color: #216E39;
+}
+
+.tool-html {
+    background: #FCE9E2;
+    color: #B54724;
+}
+
+.tool-css {
+    background: #EDE9FE;
+    color: #6941C6;
+}
+
+.tool-javascript {
+    background: #FFF8CC;
+    color: #806600;
+}
